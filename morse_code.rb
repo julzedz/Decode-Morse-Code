@@ -31,6 +31,10 @@ class MorseCode
   def self.decode_char(char)
     MORSE_CODE[char]
   end
+
+  def self.decode_word(word)
+    word.split.map{ |char| decode_char(char) }.join
+  end
 end
 
 puts MorseCode.decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
