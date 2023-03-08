@@ -37,7 +37,7 @@ class MorseCode
   end
 
   def self.decode(message)
-    message.split.map{ |word| decode_word(word) }.join(" ")
+    message.split("  ").map{ |word| decode_word(word) }.join(" ")
   end
 end
 
